@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <style name="MainTheme" parent="MainTheme.Base">
+    <item name="android:colorPrimary">@color/my_blue</item>
+    <!-- Override the color of UI controls -->
+    <item name="android:colorAccent">@color/my_purple</item>
+  </style>
+  <!-- Base theme applied no matter what API -->
+  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">#2196F3</item>
+    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="colorAccent">#FF4081</item>
+    <item name="windowActionModeOverlay">true</item>
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#FF4081</item>
+  </style>
+  <style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground" tileMode="disabled"
+          gravity="center">@drawable/simply_share_splash
+    </item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+</resources>

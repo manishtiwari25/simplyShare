@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>simplyShare</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/box.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
+                <!-- FOR SCANNING PAGE -->
+                <div class="col" id="scan">
+                    <h1 id="label">Please Scan Using Your Awsome Device</h1>
+                    <div id="qrcode"></div>     
+                </div> 
+                <!-- FOR Result PAGE -->
+                <div class='comments-container' id="divcontainer" hidden>
+                        <h1>simplyShare History</h1>
+                        <textarea id="sendSomething"></textarea><a id="sendData">Send</a>
+                        <ul id='comments-list' class='comments-list'></ul>
+                </div>
+            </div>
+        </div>       
+    </body>
+    <script type="text/javascript" src="../javascripts/external/signalR/signalr.min.js"></script>
+    <script type="text/javascript" src="../javascripts/external/qrcode.min.js"></script>
+    <script type="text/javascript" src="../javascripts/internal/qr.js"></script>
+    <script type="text/javascript" src="../javascripts/internal/connect.js"></script>
+</html>

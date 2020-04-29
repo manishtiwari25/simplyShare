@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.LoginPage">
+    <ContentPage.Content>
+        <FlexLayout  
+            BackgroundColor="White"
+            Direction="Column">
+            <Image 
+                FlexLayout.AlignSelf ="Center"
+                MinimumHeightRequest="50"
+                MinimumWidthRequest="50"
+                Margin="0,100,0,0"
+                WidthRequest="250"
+                HeightRequest="250"
+                Source="@drawable/simplyshare"/>
+
+            <Label
+                FlexLayout.AlignSelf ="Center"
+                Text="simplyShare"
+                FontAttributes="Bold"
+                FontSize="40"
+                TextColor="Black"
+                Margin="0,0,0,2"/>
+
+            <Label
+                FlexLayout.AlignSelf ="Center"
+                Text="Hassle free text sharing"
+                FontSize="Small"
+                TextColor="DarkGray"
+                Margin="0,0,0,2"/>
+
+
+         
+            <Button
+                FlexLayout.AlignSelf ="Center"
+                Margin="0,26,0,0"
+                x:Name="loginButton" 
+                Text="Login" 
+                Clicked="OnLoginButtonClicked"/>
+
+            <Label
+                FlexLayout.AlignSelf ="Center"
+                Text="© simplyShare"
+                FontSize="Caption"
+                TextColor="Black"
+                Margin="0,170,0,2"/>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

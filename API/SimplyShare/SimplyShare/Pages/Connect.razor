@@ -1,0 +1,30 @@
+﻿@page "/connect"
+@using Microsoft.AspNetCore.Authentication.AzureADB2C.UI
+@using Microsoft.Extensions.Options
+
+<AuthorizeView>
+    <Authorized>
+        QR
+    </Authorized>
+    <NotAuthorized>
+        You Must  <a href="AzureADB2C/Account/SignIn">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask{ get; set; }
+   
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authenticationStateTask;
+        var user = authState.User;
+        if (user.Identity != null)
+        {
+            if (user.Identity.IsAuthenticated)
+            {
+               
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0"
+          package="com.simplyshare.androidapp"
+          android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="28" />
+	<application android:label="simplyShare"
+               android:roundIcon="@drawable/icon"
+               android:theme="@android:style/Theme.Holo"
+               android:icon="@drawable/icon">
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-2889277787752693~6458498651"/>
+ 
+  <activity android:name="microsoft.identity.client.BrowserTabActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="msal3df797e5-0f28-440c-8303-26d74d7603f8" android:host="auth" />
+      </intent-filter>
+    </activity>
+  </application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+</manifest>

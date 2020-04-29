@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.MainPage"
+             xmlns:controls="clr-namespace:MobileApp;assembly=MobileApp">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="LogoutClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <FlexLayout BackgroundColor="White" Direction="Column" AlignItems="Start" JustifyContent="SpaceEvenly">
+                <Label Text="How To Use" FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="&#x2022; Download the simplyShare chrome extension" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; Login using your google credentials" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; Click on Connect Button below" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; Scan the QR code" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; If you want to send copied text, Please enable Copy From Clipboard switch" TextColor="Gray" FontSize="Subtitle"/>
+                <Label Text="&#x2022; Click on send" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; If you want to send custom text, Please disable Copy From Clipboard switch" TextColor="Gray" FontSize="Subtitle"/>
+                <Label Text="&#x2022; Add the text" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="&#x2022; Click on send button" FontSize="Subtitle" TextColor="Gray"/>
+                <Label Text="We are not storing any of your Personal Information."  Margin="10" FontSize="Medium" TextColor="Red"/>
+            </FlexLayout>
+        
+            <Grid Padding="5">
+                <Label Text="Next Time, Please Skip This" TextColor="Black"/>
+                <Switch IsToggled="False" Toggled="DontShowPage"/>
+            </Grid>
+
+            <Button Text="Connect"   
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnConnectClicked" 
+                Padding="20"/>
+
+            <controls:AdControlView HeightRequest="50" FlexLayout.AlignSelf="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

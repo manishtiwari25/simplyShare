@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.SendOrReceivePage"
+             xmlns:controls="clr-namespace:MobileApp;assembly=MobileApp">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"  Clicked="LogoutClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame BorderColor="IndianRed">
+            <ListView  x:Name="MyListView" 
+                       ItemsSource="{Binding SignalRMessages}"
+                       CachingStrategy="RecycleElement" 
+                       HasUnevenRows="True"
+                       Header="Received Data (Select to copy in clip-board)"
+                       Margin="0,0,0,10"
+                       SeparatorVisibility="Default"
+                       SeparatorColor="DarkSlateGray">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Message}" LineBreakMode="WordWrap" TextColor="White"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Frame>
+            <Frame BorderColor="IndianRed" Padding="10">
+                <StackLayout Spacing="10">
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="Copy From Clipboard" HorizontalOptions="StartAndExpand"/>
+                        <Switch Toggled="SwitchToggle" IsToggled="True" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Editor 
+                            Placeholder="Please Enter Here" 
+                            Keyboard="Chat" 
+                            Completed="HandleEditorText"
+                            x:Name="editor"
+                            AutoSize="Disabled"/>
+                    <Button HorizontalOptions="CenterAndExpand" Text="Send" Clicked="SendData"  Padding="5" />
+                </StackLayout>
+            </Frame>
+            <controls:AdControlView HeightRequest="90"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+<h1>
+    Welcome
+</h1>
+<button @onclick="Connect">
+    Connect
+</button>
+@code{
+    private void Connect(MouseEventArgs args)
+    {
+        Navigation.NavigateTo("Connect");
+    }
+}

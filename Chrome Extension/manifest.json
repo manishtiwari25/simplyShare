@@ -1,0 +1,21 @@
+{
+    "name": "simplyShare",
+    "version": "1.0",
+    "description": "Hassle free text sharing (PHONE <--> PC)",
+    "manifest_version": 2,
+    "permissions": ["contextMenus","tabs","https://*/","http://*/", "identity","notifications","storage"],
+    "icons": {
+        "248": "logos/logo.png"
+    },
+    "background": {
+        "scripts": ["javascripts/internal/main.js"],
+        "persistent": true
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "oauth2": {
+        "client_id": "294952323328-dkvg6u0i6nbv7tqetj4kf0ke9a6v90hh.apps.googleusercontent.com",
+        "scopes": [
+            "openid", "email", "profile"
+        ]
+      }
+}
